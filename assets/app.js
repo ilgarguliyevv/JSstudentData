@@ -422,11 +422,38 @@ function teacherName(array) {
                 teacherBox += array[i].teacher[j].name + " ";
             }
 
-            console.log(`ad: ${array[i].name}, muellimler: ${teacherBox}`);
+            // console.log(`ad: ${array[i].name}, muellimler: ${teacherBox}`);
         }
     }
 }
 
 teacherName(students)
 
-//
+// butun telebelerin hobbileri olan array yaradin
+
+// let allHobbies = [];
+
+// students.forEach(student => {
+//     allHobbies = allHobbies.concat(student.hobbies);
+// });
+// const Hobbies = [...new Set(allHobbies)];
+
+// console.log(Hobbies);
+
+// gamig hevesinde olanlar
+
+// let allGaming = [];
+
+// students.forEach(students => {
+//     allGaming = allGaming.concat(student);
+// });
+// const Gaming = [...new (allGaming)];
+// console.log(Gaming);
+
+let gamingStudents = students.filter(students => students.hobbies.includes("gaming"));
+// console.log(gamingStudents);
+
+// butun telebelerin yaslarinin cemi
+
+let totalAge = students.reduce((total, student) => total + student.age, 0);
+console.log(totalAge);
